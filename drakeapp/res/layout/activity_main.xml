@@ -1,0 +1,130 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_drakeapp"
+    android:layout_gravity="center"
+    android:columnCount="2"
+    android:orientation="horizontal"
+    android:rowCount="1" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="190dp"
+        android:layout_height="match_parent"
+        android:layout_column="0"
+        android:layout_row="0" 
+        android:layout_gravity="center"
+     >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/btnownit"
+                android:layout_width="200dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/btn_ownit" />
+
+            <ImageButton
+                android:id="@+id/btnitsyours"
+                android:layout_width="170dp"
+                android:layout_height="54dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_itsyours" />
+
+            <ImageButton
+                android:id="@+id/btnworst"
+                android:layout_width="140dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_worst" />
+
+            <ImageButton
+                android:id="@+id/btnmofugga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_mofugga" />
+
+            <ImageButton
+                android:id="@+id/btnthemotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_themotion" />
+            
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_height="match_parent"
+        android:layout_column="1"
+        android:layout_row="0"
+        android:layout_width="190dp"
+	    android:orientation="vertical" >
+
+		<LinearLayout
+		    android:layout_width="182dp"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="top|center"
+		    android:orientation="vertical" >
+	
+	        <ImageButton
+	            android:id="@+id/btncomethru"
+	            android:layout_width="170dp"
+	            android:layout_height="54dp"
+	            android:layout_gravity="center"
+	            android:layout_marginBottom="5dp"
+	            android:layout_marginTop="90dp"
+	            android:background="@drawable/btn_comethru" />
+	
+	        <ImageButton
+	            android:id="@+id/btnigetit"
+	            android:layout_width="170dp"
+	            android:layout_height="54dp"
+	            android:layout_marginBottom="5dp"
+	            android:layout_marginTop="5dp"
+	            android:background="@drawable/btn_igetit" />
+	
+	        <ImageButton
+	            android:id="@+id/btnneva"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="5dp"
+	            android:layout_marginTop="5dp"
+	            android:background="@drawable/btn_nevahluhdus" />
+	
+	        <ImageButton
+	            android:id="@+id/btnstarted"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="5dp"
+	            android:layout_marginTop="5dp"
+	            android:background="@drawable/btn_startedftb" />
+	
+	        <ImageButton
+	            android:id="@+id/btnwhat"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="5dp"
+	            android:layout_marginTop="5dp"
+	            android:background="@drawable/btn_whatsup" />
+	    </LinearLayout>
+
+    </ScrollView>
+
+    
+</GridLayout>
