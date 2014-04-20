@@ -1,26 +1,32 @@
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_drakeapp"
     android:layout_gravity="center"
-    android:columnCount="2"
-    android:orientation="horizontal"
-    android:rowCount="1" >
+    android:background="#000000"
+ >
+
+	<ImageView
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerVertical="true"
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent"
+	    android:src="@drawable/bg_drakeapp" />
 
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="190dp"
         android:layout_height="match_parent"
-        android:layout_column="0"
-        android:layout_row="0" 
+
         android:layout_gravity="center"
+ 		android:background="#00000000"
      >
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:background="#00000000">
 
             <ImageButton
                 android:id="@+id/btnownit"
@@ -70,17 +76,19 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
+        android:layout_alignParentRight="true"
+        
         android:layout_height="match_parent"
-        android:layout_column="1"
-        android:layout_row="0"
         android:layout_width="190dp"
-	    android:orientation="vertical" >
+	    android:orientation="vertical"
+	    android:background="#00000000" >
 
 		<LinearLayout
 		    android:layout_width="182dp"
 		    android:layout_height="wrap_content"
 		    android:layout_gravity="top|center"
-		    android:orientation="vertical" >
+		    android:orientation="vertical"
+		    android:background="#00000000" >
 	
 	        <ImageButton
 	            android:id="@+id/btncomethru"
@@ -127,4 +135,4 @@
     </ScrollView>
 
     
-</GridLayout>
+</RelativeLayout>
