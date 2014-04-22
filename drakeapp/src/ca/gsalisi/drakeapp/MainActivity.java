@@ -2,6 +2,9 @@ package ca.gsalisi.drakeapp;
 
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
+import android.media.MediaPlayer.OnErrorListener;
+import android.media.MediaPlayer.OnPreparedListener;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
@@ -47,6 +50,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		if(mPlayer != null){
 			if(mPlayer.isPlaying()){
 				mPlayer.stop();
+				mPlayer.release();
 			}
 		}
 		
@@ -83,7 +87,25 @@ public class MainActivity extends Activity implements OnClickListener {
 				break;
 		}
 		mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-		mPlayer.start();
+		mPlayer.setOnPreparedListener(new OnPreparedListener(){
+
+			@Override
+			public void onPrepared(MediaPlayer arg0) {
+				// TODO Auto-generated method stub
+				mPlayer.start();
+				
+			}
+		});
+		mPlayer.setOnCompletionListener(new OnCompletionListener(){
+
+			@Override
+			public void onCompletion(MediaPlayer mp) {
+				mp.release();
+				
+			}});
+
+
+		
 		
 	}
 	
@@ -91,6 +113,16 @@ public class MainActivity extends Activity implements OnClickListener {
 	public void onPause(){
 		super.onPause();
 		mPlayer.stop();
+		mPlayer.release();
+	}
+	@Override
+	public void onResume(){
+		super.onResume();
+		try{
+			mPlayer.reset();
+		}catch(Exception e){
+			
+		}
 	}
 
 }
