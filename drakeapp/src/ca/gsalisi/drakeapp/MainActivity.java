@@ -119,11 +119,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	public void onResume(){
 		super.onResume();
 		mPlayer = null;
-//		try{
-//			mPlayer.reset();
-//		}catch(Exception e){
-//			
-//		}
+
 	}
 	public int convertToPixel(int dp) {
 		return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
