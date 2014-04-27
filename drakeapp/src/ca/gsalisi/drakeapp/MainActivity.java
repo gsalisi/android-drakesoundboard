@@ -8,9 +8,11 @@ import android.media.MediaPlayer.OnPreparedListener;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends Activity implements OnClickListener {
 	
@@ -20,6 +22,12 @@ public class MainActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		int layoutWidth = (int) this.getResources().getDisplayMetrics().widthPixels;  
+		RelativeLayout rlayoutLeft = (RelativeLayout) findViewById(R.id.rlayoutleft);
+		RelativeLayout rlayoutRight = (RelativeLayout) findViewById(R.id.rlayoutright);
+		rlayoutLeft.getLayoutParams().width = layoutWidth/2 - convertToPixel(15);
+		rlayoutRight.getLayoutParams().width = layoutWidth/2 - convertToPixel(15);
 		
 		ImageButton btn = (ImageButton) findViewById(R.id.btnworst);
 		btn.setOnClickListener(this);
@@ -116,6 +124,10 @@ public class MainActivity extends Activity implements OnClickListener {
 //		}catch(Exception e){
 //			
 //		}
+	}
+	public int convertToPixel(int dp) {
+		return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
+				getResources().getDisplayMetrics());
 	}
 
 }

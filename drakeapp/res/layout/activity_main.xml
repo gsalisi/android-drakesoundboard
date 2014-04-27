@@ -12,34 +12,33 @@
 	    android:layout_height="match_parent"
 	    android:src="@drawable/bg_drakeapp" />
 
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="190dp"
+    <RelativeLayout
+        android:id="@+id/rlayoutleft"
+        android:layout_width="160dp"
         android:layout_height="match_parent"
-
         android:layout_gravity="center"
- 		android:background="#00000000"
+        android:layout_marginLeft="15dp"
      >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical"
             android:background="#00000000">
 
             <ImageButton
                 android:id="@+id/btnownit"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="100dp"
                 android:background="@drawable/btn_ownit" />
 
             <ImageButton
                 android:id="@+id/btnitsyours"
-                android:layout_width="170dp"
+                android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
@@ -47,7 +46,7 @@
 
             <ImageButton
                 android:id="@+id/btnworst"
-                android:layout_width="140dp"
+                android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="5dp"
@@ -56,52 +55,50 @@
 
             <ImageButton
                 android:id="@+id/btnmofugga"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/btn_mofugga" />
 
             <ImageButton
                 android:id="@+id/btnthemotion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/btn_themotion" />
             
         </LinearLayout>
 
-    </ScrollView>
+    </RelativeLayout>
 
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <RelativeLayout
+        android:id="@+id/rlayoutright"
         android:layout_alignParentRight="true"
-        
+        android:layout_marginRight="15dp"
         android:layout_height="match_parent"
-        android:layout_width="190dp"
-	    android:orientation="vertical"
-	    android:background="#00000000" >
+        android:layout_width="160dp"
+	    android:orientation="vertical" >
 
 		<LinearLayout
-		    android:layout_width="182dp"
+		    android:layout_width="match_parent"
 		    android:layout_height="wrap_content"
-		    android:layout_gravity="top|center"
-		    android:orientation="vertical"
-		    android:background="#00000000" >
+		    android:layout_centerVertical="true"
+		    android:layout_gravity="center"
+		    android:orientation="vertical">
 	
 	        <ImageButton
 	            android:id="@+id/btncomethru"
-	            android:layout_width="170dp"
+	            android:layout_width="match_parent"
 	            android:layout_height="54dp"
 	            android:layout_gravity="center"
 	            android:layout_marginBottom="5dp"
-	            android:layout_marginTop="90dp"
 	            android:background="@drawable/btn_comethru" />
 	
 	        <ImageButton
 	            android:id="@+id/btnigetit"
-	            android:layout_width="170dp"
+	            android:layout_width="match_parent"
 	            android:layout_height="54dp"
 	            android:layout_marginBottom="5dp"
 	            android:layout_marginTop="5dp"
@@ -109,7 +106,7 @@
 	
 	        <ImageButton
 	            android:id="@+id/btnneva"
-	            android:layout_width="wrap_content"
+	            android:layout_width="match_parent"
 	            android:layout_height="wrap_content"
 	            android:layout_marginBottom="5dp"
 	            android:layout_marginTop="5dp"
@@ -117,7 +114,7 @@
 	
 	        <ImageButton
 	            android:id="@+id/btnstarted"
-	            android:layout_width="wrap_content"
+	            android:layout_width="match_parent"
 	            android:layout_height="wrap_content"
 	            android:layout_marginBottom="5dp"
 	            android:layout_marginTop="5dp"
@@ -125,14 +122,14 @@
 	
 	        <ImageButton
 	            android:id="@+id/btnwhat"
-	            android:layout_width="wrap_content"
+	            android:layout_width="match_parent"
 	            android:layout_height="wrap_content"
 	            android:layout_marginBottom="5dp"
 	            android:layout_marginTop="5dp"
 	            android:background="@drawable/btn_whatsup" />
 	    </LinearLayout>
 
-    </ScrollView>
+    </RelativeLayout>
 
     
 </RelativeLayout>
