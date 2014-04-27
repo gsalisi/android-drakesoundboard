@@ -17,11 +17,14 @@ import android.widget.RelativeLayout;
 public class MainActivity extends Activity implements OnClickListener {
 	
 	private MediaPlayer mPlayer;
+	private boolean isCreated;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		isCreated = false;
 		
 		int layoutWidth = (int) this.getResources().getDisplayMetrics().widthPixels;  
 		RelativeLayout rlayoutLeft = (RelativeLayout) findViewById(R.id.rlayoutleft);
@@ -95,7 +98,11 @@ public class MainActivity extends Activity implements OnClickListener {
 				mPlayer = MediaPlayer.create(this, R.raw.whatsup);
 				break;
 		}
+		
 		mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+		
+		isCreated = true;
+		
 		mPlayer.setOnPreparedListener(new OnPreparedListener(){
 
 			@Override
@@ -111,9 +118,11 @@ public class MainActivity extends Activity implements OnClickListener {
 	@Override
 	public void onPause(){
 		super.onPause();
-		mPlayer.stop();
-		mPlayer.reset();
-		mPlayer.release();
+		if(isCreated){
+			mPlayer.stop();
+			mPlayer.reset();
+			mPlayer.release();
+		}
 	}
 	@Override
 	public void onResume(){
