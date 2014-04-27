@@ -50,6 +50,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		if(mPlayer != null){
 			if(mPlayer.isPlaying()){
 				mPlayer.stop();
+				mPlayer.reset();
 				mPlayer.release();
 			}
 		}
@@ -96,16 +97,6 @@ public class MainActivity extends Activity implements OnClickListener {
 				
 			}
 		});
-		mPlayer.setOnCompletionListener(new OnCompletionListener(){
-
-			@Override
-			public void onCompletion(MediaPlayer mp) {
-				mp.release();
-				
-			}});
-
-
-		
 		
 	}
 	
@@ -113,16 +104,18 @@ public class MainActivity extends Activity implements OnClickListener {
 	public void onPause(){
 		super.onPause();
 		mPlayer.stop();
+		mPlayer.reset();
 		mPlayer.release();
 	}
 	@Override
 	public void onResume(){
 		super.onResume();
-		try{
-			mPlayer.reset();
-		}catch(Exception e){
-			
-		}
+		mPlayer = null;
+//		try{
+//			mPlayer.reset();
+//		}catch(Exception e){
+//			
+//		}
 	}
 
 }
